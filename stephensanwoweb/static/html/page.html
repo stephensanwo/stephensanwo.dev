@@ -1,0 +1,203 @@
+{% extends "base.html" %} {% block content %}
+<div class="page-content">
+  <section class="project-container">
+    <div class="breadcrumb">
+      <span>
+        <a href="/">Home </a> <span class="breadcrumb-divider">/</span> {% for
+        page in breadcrumb %} <a href="{{page.page_url}}">{{page.page}} </a>
+        <span class="breadcrumb-divider">/</span>{% endfor %}
+        <p>{{data.title}}</p>
+      </span>
+    </div>
+    <h1 class="heading">{{data.title}}</h1>
+    <div class="tag-container">
+      {% for url in data.urls %}
+      <a
+        class="button button-secondary"
+        href="{{url.url}}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <h6>{{url.title}}</h6>
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            width="16"
+            height="16"
+            fill="white"
+            style="mix-blend-mode: multiply"
+          />
+          <path
+            d="M5 3V4H11.295L3 12.295L3.705 13L12 4.705V11H13V3H5Z"
+            fill="white"
+          />
+        </svg>
+      </a>
+      {% endfor %}
+    </div>
+    <h5 class="paragraph caption">{{data.caption}}</h5>
+  </section>
+
+  <section>
+    {% for element in data.body %} {% if element.type == "sub-heading" %}
+    <h4 class="sub-heading">{{element.content | safe }}</h4>
+    {%elif element.type == "paragraph" %} {% for item in element.content %}
+    <p class="paragraph">{{item | safe}}</p>
+    {% endfor %} {%elif element.type == "list" %}
+    <ol class="list">
+      {{element.content | safe}}
+    </ol>
+    {%elif element.type == "image" %}
+    <div class="section-image">
+      <img src="{{element.url}}" width="100%" alt="{{element.title}}" />
+    </div>
+    {%elif element.type == "warning" %}
+    <div class="notification notification-warning">
+      <p>{{element.content}}</p>
+    </div>
+    {%elif element.type == "error" %}
+    <div class="notification notification-error">
+      <h6>{{element.content}}</h6>
+    </div>
+
+    {%elif element.type == "other-element" %}
+    <div class="other-element-div">{{element.content | safe}}</div>
+
+    {% elif element.type == "code-snippet-gist" %}
+    <script class="code-container" src="{{element.url}}"></script>
+
+    {% elif element.type == "code-snippet-default" %}
+    <pre class="code-container">
+      <code class="language-{{element.language}}">{{element.content}}</code>
+    </pre>
+
+    {%elif element.type == "embedded-video" %}
+    <div style="margin-bottom: 30px; margin-top: 30px">
+      <iframe
+        src="{{element.url}}"
+        height="500px"
+        width="100%"
+        frameborder="0"
+        allowfullscreen=""
+        title="{{element.title}}"
+      ></iframe>
+    </div>
+    {%elif element.type == "markdown" %}
+    <div id="markdown">{{element.content | safe}}</div>
+
+    {% endif %} {% endfor %}
+  </section>
+  <section class="links">
+    {% for link in data.links %} {% if link.actions %}
+    <div style="margin-top: 10px">{{link.actions | safe}}</div>
+    {% endif %}
+    <a class="link" href="{{link.url}}">
+      <div class="link-content">
+        <div>
+          <h4>{{link.title | safe}}</h4>
+          <div class="link-icon">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                width="16"
+                height="16"
+                fill="white"
+                style="mix-blend-mode: multiply"
+              />
+              <path
+                d="M5 3V4H11.295L3 12.295L3.705 13L12 4.705V11H13V3H5Z"
+                fill="#000"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="link-description">
+          <small>{{link.description | safe}}</small>
+        </div>
+        {% if link.status %}
+        <div class="link-status">
+          {% if link.product %}
+          <p>{{link.product}}</p>
+          {% endif %}
+          <div class="status">
+            <div class="status-icon {{link.status}}"></div>
+            <p>{{link.status}}</p>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    </a>
+    {% endfor %}
+  </section>
+  <section class="cards">
+    {% for card in data.cards %}
+    <a class="card" href="{{card.url}}">
+      <div class="card-content">
+        <div class="card-image">
+          <img
+            src="{{card.coverImage}}"
+            alt="{{card.title}}"
+            width="100%"
+            loading="lazy"
+          />
+        </div>
+
+        <div>
+          <div class="card-header">
+            <h4 class="card-hover">{{card.title}}</h4>
+            <div class="link-icon">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  width="16"
+                  height="16"
+                  fill="white"
+                  style="mix-blend-mode: multiply"
+                />
+                <path
+                  d="M5 3V4H11.295L3 12.295L3.705 13L12 4.705V11H13V3H5Z"
+                  fill="#000"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="card-description">
+            <small>{{card.description}}</small>
+          </div>
+          <div class="card-footer">
+            <p>{{card.readTime}} Minutes Read</p>
+          </div>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+  </section>
+  <section>
+    <div class="tag-container footer-tags">
+      {% if data.tags %}
+      <p><strong>Tags</strong></p>
+      {% endif %} {% for tag in data.tags %}
+      <div class="tag tag-Grey">
+        <p>{{tag}}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+</div>
+
+{% endblock %}

@@ -1,0 +1,77 @@
+title: Stephen Sanwo Design System
+slug: "projects/stephensanwo-design-system-v1.0"
+notification: False
+notification_message: ""
+content: Project
+breadcrumb:
+  - page: Projects
+    page_url: "/projects"
+meta:
+  product: Stephen Sanwo Design System
+  title: Stephen Sanwo Design System
+  description: Simplistic, minimalist, design system for building user interfaces - Stephen Sanwo Design System 
+  type: website
+  url: https://www.stephensanwo.dev/stephensanwo-design-system-v1.0
+  image: "https://imagedelivery.net/QvztslYf_CbfgwmRjfn0OA/a807d4db-fcd4-49bc-913d-a0d0c9c1cc00/mobile"
+  tags: 
+    - Design System
+    - React 
+    - Storybook
+  authors: 
+    - Stephen Sanwo
+data:
+  title: Stephen Sanwo Design System
+
+  urls:
+    - id: 1
+      url: 'https://master--63a5dc4be86f4a20b8f2f905.chromatic.com/?path=/docs/getting-started--welcome-screen'
+      title: Storybook
+
+    - id: 2
+      url: 'https://github.com/stephensanwo/stephensanwo-design-system'
+      title: Github
+
+    - id: 3
+      url: 'https://www.npmjs.com/package/stephensanwo-design-system?activeTab=readme'
+      title: NPM
+
+  caption: Simplistic, minimalist, design system for building user interfaces - Stephen Sanwo Design System
+
+  tags: 
+    - Design System
+    - React 
+    - Storybook
+    - Frontend Development
+
+  body:
+    - type: paragraph
+      content: 
+      - Open design system for products and digital experiences, with mostly ideas around simplistic and functional design at its foundation, the system consists of some working react code, and resources, and may perhaps grow into a larger project in the future.
+
+    - type: warning
+      content: "This is an experimental personal project, for iterating design ideas and testing components across my projects."
+      
+    - type: other-element
+      content: '<iframe src="https://master--63a5dc4be86f4a20b8f2f905.chromatic.com/iframe.html?id=components-header--basic-header&viewMode=docs&shortcuts=false&singleStory=true" width="100%" height="500px" style="overflow: visible"></iframe>'
+
+    - type: other-element
+      content: '<iframe src="https://master--63a5dc4be86f4a20b8f2f905.chromatic.com/iframe.html?id=components-inlinenotification&viewMode=docs&shortcuts=false&singleStory=true" width="100%" height="500px" style="overflow: visible"></iframe>'
+
+    - type: other-element
+      content: '<iframe src="https://master--63a5dc4be86f4a20b8f2f905.chromatic.com/iframe.html?id=components-linkbutton&viewMode=docs&shortcuts=false&singleStory=true" width="100%" height="500px" style="overflow: visible"></iframe>'
+
+    - type: other-element
+      content: '<iframe src="https://master--63a5dc4be86f4a20b8f2f905.chromatic.com/iframe.html?id=components-button&viewMode=docs&shortcuts=false&singleStory=true" width="100%" height="500px" style="overflow: visible"></iframe>'
+      
+    - type: other-element
+      content: '<iframe src="https://master--63a5dc4be86f4a20b8f2f905.chromatic.com/iframe.html?id=components-text&viewMode=docs&shortcuts=false&singleStory=true" width="100%" height="500px" style="overflow: visible"></iframe>'
+
+    - type: other-element
+      content: '<iframe src="https://master--63a5dc4be86f4a20b8f2f905.chromatic.com/iframe.html?id=components-loader&viewMode=docs&shortcuts=false&singleStory=true" width="100%" height="500px" style="overflow: visible"></iframe>'
+
+    - type: other-element
+      content: '<iframe src="https://master--63a5dc4be86f4a20b8f2f905.chromatic.com/iframe.html?id=components-footer&viewMode=docs&shortcuts=false&singleStory=true" width="100%" height="500px" style="overflow: visible"></iframe>'
+
+  cards: []
+
+  links: []

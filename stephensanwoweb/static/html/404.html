@@ -1,0 +1,10 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="page-content">
+  <div style="display: flex; justify-content: center; margin-bottom: 30px">
+    <img src="{{ url_for('static', path='/assets/error.svg') }}" width="80px" />
+  </div>
+  <h4 style="text-align: center">Page Not Found</h4>
+</div>
+
+{% endblock %}

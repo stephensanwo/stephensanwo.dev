@@ -1,0 +1,33 @@
+title: Engineering Blog Archive - Github | Stephen Sanwo
+slug: ""
+notification: False
+notification_message: ""
+content: Dashboard
+breadcrumb:
+  - page: Application Backend and Settings
+    page_url: /dashboard
+meta:
+  product: "Engineering Blog Archive - Github"
+  title: Engineering Blog Archive - Github | Stephen Sanwo
+  description: Engineering Blog Archive - Github  
+  type: website
+  url: https://www.stephensanwo.dev/dashboard/blog
+  image: ""
+  tags: []
+  authors: 
+    - Stephen Sanwo
+data:
+  title: "Engineering Blog Archive - Github"
+  urls: 
+    - id: 1
+      url: '/dashboard/blog/create'
+      title: Add new blog post
+
+    - id: 2
+      url: '/dashboard/blog?force_refresh=True'
+      title: Force Refresh
+  caption: ""
+  tags: []
+  body: []
+  cards: []
+  links: []

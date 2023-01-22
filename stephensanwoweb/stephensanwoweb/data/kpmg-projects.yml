@@ -1,0 +1,49 @@
+title: KPMG Projects | Stephen Sanwo
+slug: "projects/kpmg-projects"
+notification: False
+notification_message: ""
+content: Project
+breadcrumb:
+  - page: Projects
+    page_url: "/projects"
+meta:
+  product: KPMG Projects
+  title: KPMG Projects | Stephen Sanwo
+  description: At KPMG, I built data-driven software applications, for clients with domain-specific use cases, within the financial services and consumer market industries.
+  type: website
+  url: https://www.stephensanwo.dev/projects/kpmg-projects
+  image: ""
+  tags: 
+    - Automation
+    - Financial Services
+    - Big Data Analytics
+    - Data-Driver Software
+  authors: 
+    - Stephen Sanwo
+data:
+  title: KPMG Projects
+  urls: []
+  caption: At KPMG, I built data-driven software applications, for clients with domain-specific use cases, within the financial services and consumer market industries.
+  tags: 
+    - Automation
+    - Financial Services
+    - Big Data Analytics
+    - Data-Driver Software
+  body:
+    - type: markdown
+      content: |
+        #### KPMG ATM Reconciliation Application for Nigerian Commercial Banks
+
+        An event-driven microservice and web application, that automates the analysis of unstructured log data from thousands of ATM Machines in real time, increasing operational efficiency for ATM monitoring teams by at least 99%.
+
+        ![ATM Reconciliation](https://imagedelivery.net/QvztslYf_CbfgwmRjfn0OA/aa5cd2fb-d5ff-4f19-96b9-3e97d3812c00/public)
+
+        #### Asset Reconciliation & Analytics Software
+
+        A scalable robotics application that reconciles millions of assets data from KPMG's live asset data capture app (Assetify), for large telecoms clients.
+
+        #### KPMG Signals Repository Hackathon - Data Archeology & Pipeline Ingestion of Company Data for KPMG Signal Repository
+
+        A Data ingestion pipeline for company centric data from multiple sources into KPMG signals repository; 6482 Companies base information available. Company base Data that includes general information about the company, market cap, description, etc. Granular data available for S&P 500 companies; Financial Ratios, Financial Statements, Company News and Announcements, Trading Data, Key Employees Data, Customers and Suppliers Data <a href='https://github.com/stephensanwo/KPMG-Hackathon-Company-Data-Fabric' target='_blank' rel='noopener noreferrer'>View github repo</a>
+  cards: []
+  links: []

@@ -1,0 +1,36 @@
+.profile-container {
+    margin-top: 20px;
+    display: flex;
+    gap:110px
+    
+}
+
+.profile-container >div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+
+}
+
+.contact-icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.contact-icons > div:nth-child(1){
+    display: flex;
+    align-items: center;
+    
+}
+
+@media (max-width: 600px) {
+    .profile-container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px
+    }
+  
+  }

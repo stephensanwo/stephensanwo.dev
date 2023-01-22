@@ -1,0 +1,130 @@
+title: Open-Workflow - Open-source Low-code Analytics Automation Workflow
+slug: "projects/open-workflow-v0.1"
+notification: False
+notification_message: ""
+content: Project
+breadcrumb:
+  - page: Projects
+    page_url: "/projects"
+meta:
+  product: Open Workflow v0.1
+  title: Open-Workflow - Open source Low-code Analytics Automation Workflow
+  description: Open-Workflow is an open source low-code analytics automation workflow, that decouples monolithic analytics projects into re-usable functional components, chained together to solve a problem  
+  type: website
+  url: https://www.stephensanwo.dev/projects/open-workflow-v0.1
+  image: https://imagedelivery.net/QvztslYf_CbfgwmRjfn0OA/79fc7213-4b89-4aa4-51b0-e049c2332100/public
+  tags: 
+    - Open Workflow 
+    - Automation 
+    - Python
+    - Analytics
+    - Software
+    - Open Source
+  authors: 
+    - Stephen Sanwo
+data:
+  title: Open Workflow - Open source Low-code Analytics Automation Workflow
+
+  urls:
+    - id: 1
+      url: 'https://github.com/stephensanwo/open-workflow'
+      title: Contribute on Github
+
+    - id: 2
+      url: '/projects/open-workflow-v0.1'
+      title: Live Product Page
+
+  caption: Open Workflow is an open source low-code analytics automation workflow, that decouples monolithic analytics projects into re-usable functional components that can be chained together to solve a problem
+
+  tags: 
+    - Open Workflow 
+    - Automation 
+    - Python
+    - Analytics
+    - Software
+    - Open Source
+
+  body:
+
+    - type: paragraph
+      content: 
+        - Open Workflow improves the collaboration between business process owners (who are typically non-coders), and developers, by providing an infrastructure where developers can share pre-written functions, targeted at solving specific use cases, which consumers can then mix and match while building their workflows using a simple user interface.
+
+    - type: embedded-video
+      title: Open Workflow walkthrough
+      url: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6939837896673669122?compact=1"
+
+    - type: sub-heading
+      content: Why Open Workflow?
+      
+    - type: paragraph
+      content: 
+      - Having worked in analytics and automation for some really complex use cases, Multilayered analytics can become complex and tedious quickly. A useful approach will be to break down the analytics into modular functions that can be called anytime. These functions may be built by you or some other person, but the very basic principle is that the function will take an input of a range of data structures and return an output. These functions can then be mixed and matched in multiple ways to create a workflow that solves a specific problem. For example, a simple reconciliation work flow between two different data sources could involve the following
+
+    - type: list
+      content: "<li>Data extraction from source system A</li><li>Data extraction from source system B</li><li>Run a basic probabilistic fuzzy match on specific columns</li><li>Or Run a more advanced ML-based matching algorithm where a unique identifier does not exist</li><li>Extract reconciliation reports, and send by email</li>"
+
+    - type: paragraph
+      content: 
+      - Each of these work steps can be created as simple functions and chained together in a workflow that can run on a monthly basis.
+
+    - type: image
+      title: Flow Studio
+      url: "https://imagedelivery.net/QvztslYf_CbfgwmRjfn0OA/79fc7213-4b89-4aa4-51b0-e049c2332100/public"
+
+    - type: paragraph
+      content: 
+      - With Open Workflow, developers can create re-usable functions, and wrap them with a simple user interface, where consumers can easily provide the variables required by those functions, and chain these functions together a s part of a larger workflow. For example, the reconciliation workflow will have 4 functions for each step, two of which are not necessarily related to a reconciliation procedure itself (extracting data from source systems and sending reports to an email address)
+
+    - type: paragraph
+      content: 
+      - A business owner (consumer) can provide the required variables to run the workflow and reuse, batch or schedule data operations. From a developer point of view, you wouldn’t need to provide an API or use a tool like streamlit for every application you want some users to consume. You can embed your functions in Open Workflow and mix and match the logic for your workflow as you wish. From a business owner point of view, you have the flexibility to go beyond a preset workflow logic set by the developer and construct your own logic.
+
+    - type: image
+      title: Node Image
+      url: "https://imagedelivery.net/QvztslYf_CbfgwmRjfn0OA/17c1a825-a472-4b00-f5cd-1f3d2f6e7400/public"
+
+    - type: sub-heading
+      content: How it Works
+      
+    - type: paragraph
+      content: 
+      - Open Workflow is a collection of worfklows that solve an analytics problem or automates a process. The basic unit of a flow is the node and you can have infinite nodes in a flow. Nodes are essentially functions that take an input and generate an output. The output is either passed on to a subsequent node, multiple subsequent nodes, or as a final output. A node can also either be a component node or a code node.
+
+    - type: paragraph
+      content: 
+      - A component node is a function has been pre built and tested by a contributor and it provides a simple user interface to interact with it. You have little or no flexibility with component nodes. For example, grouping a data frame can be a component node, if all the required variables are converted to input dialogs or a simple key-value input.
+
+    - type: paragraph
+      content: 
+      - Nodes communicate with each other through the edges. nodes will always run in a sequential order except a node is called directly and it does not depend on an output from another node. Selecting a node opens up an actions pane, the configuration of the actions pane will vary depending on if the node is a component node or a code node. Component nodes will have a user interface for inputs, the code nodes however will have a code interface with more flexibility to control and alter the underlying code directly.
+
+    - type: sub-heading
+      content: Software Architecture
+
+    - type: paragraph
+      content: 
+      - At a high level the user will interact with Open Workflow through the client built in React (TypeScript), with IBM Carbon as the design system. The API Gateway that serves API calls from and to the client is built in GO, and just serves as a proxy between the client and the background processing queues.
+
+    - type: paragraph
+      content: 
+      - For compiling the python code and testing in-browser, I will be exploring Pyiodie and WASM. This will help in scaling across to users, and only sever-based scheduled workflows will require a python server environment. This obviously has to be implemented as a background task with service workers, so as not to disrupt the main browser thread. There probably could be a feature add-on that will support in-browser Go and JavaScript.
+
+    - type: paragraph
+      content: 
+      - For the backend processing task queues, Its a choce between Apache Kafka and Redis, I'm however leaning towards Redis. I intend to spin up nodes that have been pre configured with python environments. For metadata storage, I will use a PostgreSQL database and a Redis cache. Things may change in the future. And I will continue to write about this journey and why I have decided to go for which technologies I use.
+
+    - type: paragraph
+      content: 
+      - Obviously there is the question of scaling. In-browser compilation with WASM will definitely reduce the load on the python nodes. However, Pyiodie and WASM do not support all python libraries yet so there has to be python nodes that can be spun up by the users. While this is intended to be a deploy-on-your-own docker compose workflow, I believe there is also a possiblity of a scalable cloud option in the future.
+
+    - type: sub-heading
+      content: Contribute
+
+    - type: paragraph
+      content: 
+      - "Open Workflow is open source, to contribute, check out the github repository at <a href='https://github.com/stephensanwo/open-workflow'> https://github.com/stephensanwo/open-workflow</a> Please read the <a href='https://github.com/stephensanwo/open-workflow/blob/master/LICENSE'>License</a>."
+
+  cards: []
+
+  links: []
