@@ -54,7 +54,7 @@ data:
 
     - type: paragraph
       content: 
-      - This project naievely estimate urban development index (UDI) for target areas of interest (AOI) over time, using satellite imagery and computer vision algorithms (Open CV). The project is targeted at improving the inefficiencies in local government agencies in tracking, and analyzing Urban Development Index within geolocations.
+      - This project naively estimates urban development index (UDI) for target areas of interest (AOI) over time, using satellite imagery and computer vision algorithms (Open CV). The project is targeted at improving the inefficiencies in local government agencies in tracking and analyzing Urban Development Index within geolocations.
 
     - type: warning
       content: APPLICATION MAY BE UNSTABLE - This application is a development build for testing purposes only. It is not intended for production use, nor does it guarantee accuracy of the result.
@@ -89,7 +89,7 @@ data:
 
     - type: paragraph
       content: 
-      - "<strong>Projects Overview</strong> <br/> <p class='paragraph'>Projects help organize different geolocations as distinc projects. Create a new project for a new geo-location</p>"
+      - "<strong>Projects Overview</strong> <br/> <p class='paragraph'>Projects help organize different geolocations as distinct projects. Create a new project for a new geo-location</p>"
 
     - type: image
       title: Projects Overview
