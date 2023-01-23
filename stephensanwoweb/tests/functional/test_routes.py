@@ -19,5 +19,6 @@ def test_project_routes(client):
 @pytest.mark.asyncio
 async def test_blog_routes(client, context):
     blog_list = await context.cache.get_json(key="blog_data")
-    print(blog_list)
-    pass
+    for key, value in blog_list.items():
+        response = client.get(f"blog/{key}")
+        assert response.status_code == 200
