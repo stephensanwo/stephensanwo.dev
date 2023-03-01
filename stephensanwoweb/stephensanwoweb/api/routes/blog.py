@@ -25,6 +25,9 @@ async def projects(request: Request, ctx: WebMicroserviceContext = Depends(get_c
                 dateUpdated = blog['last_update'].split(" ")[0],
                 coverImage = blog['meta']['image'],
                 readTime = blog['mins_read'],
+                isInfographic = True if blog['meta']['product'] == "Infographics" else False,
+                category = f"{blog['content'][:2]}".upper(),
+                author = blog["meta"]["authors"][0]
             ).dict()
         )
     blog_page = parse_data(request, path="blog", object_response=True)

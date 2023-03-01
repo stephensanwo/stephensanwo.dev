@@ -21,7 +21,14 @@
 
 pre[class*="language-"] {
     border-radius: 6px !important;
+    border: 1px solid #e8e8e8;
  }
+
+p > code {
+    border: none;
+    background-color: #e8e8e8;
+}
+
 pre[class*="language-"] > code {
 	position: relative !important;
 	display: block !important;
@@ -30,7 +37,7 @@ pre[class*="language-"] > code {
 code,
 code[class*="language-"],
 pre[class*="language-"] {
-     background: #f4f4f4;
+     background: #fafafa;
      color: #000;
      font-family: "IBM Plex Mono";
      direction: ltr;
@@ -53,14 +60,14 @@ pre[class*="language-"] {
  code[class*="language-"]::-moz-selection,
  code[class*="language-"] *::-moz-selection,
  pre[class*="language-"] *::-moz-selection {
-     background: #f4f4f4;
+     background: #fafafa;
      color: inherit;
  }
  
  code[class*="language-"]::selection,
  code[class*="language-"] *::selection,
  pre[class*="language-"] *::selection {
-     background: #f4f4f4;
+     background: #fafafa;
      color: inherit;
  }
  
@@ -78,7 +85,7 @@ pre[class*="language-"] {
      padding: 0.2em 0.3em;
      border-radius: 0.3em;
      white-space: normal;
-     background-color: #f4f4f4;
+     background-color: #fafafa;
  }
  
  .token.comment,
@@ -262,7 +269,7 @@ pre[class*="language-"] {
  div.code-toolbar > .toolbar.toolbar > .toolbar-item > button,
  div.code-toolbar > .toolbar.toolbar > .toolbar-item > a,
  div.code-toolbar > .toolbar.toolbar > .toolbar-item > span {
-     background: #f4f4f4;
+     background: #fafafa;
      color: hsl(230, 6%, 44%);
      padding: 0.1em 0.4em;
      border-radius: 0.3em;
@@ -287,7 +294,7 @@ pre[class*="language-"] {
  /* Default line numbers in Line Highlight plugin */
  .line-highlight.line-highlight:before,
  .line-highlight.line-highlight[data-end]:after {
-     background: #f4f4f4;
+     background: #fafafa;
      color: hsl(230, 8%, 24%);
      padding: 0.1em 0.6em;
      border-radius: 0.3em;

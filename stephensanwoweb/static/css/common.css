@@ -427,7 +427,7 @@ li::before {
 }
 
 .section-image > img {
-  background-color: #e8e8e8;
+  background-color: #fff;
 }
 
 /* Notifications */

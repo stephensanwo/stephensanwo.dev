@@ -9,10 +9,10 @@ a.card {
 
 .card-content {
     display: flex;
-    padding-top: 35px;
-    padding-bottom: 35px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     border-bottom: 1px solid #e8e8e8;
-    gap: 40px;
+    gap: 20px;
 
 }
 
@@ -20,31 +20,11 @@ a.card {
     transform: scale(101%);
 }  
 
-.card-image {
-    width: 200px; 
-    height: 150px;    
-    border-radius: 10px;
-
-}
-.card-image > img {
-    height: 150px;
-    width: 200px;
-    object-fit: cover;
-    border-radius: 5px;
-    background-color: #e8e8e8;
-    text-align: center;
-  }
-
 .card-description {
     margin-top: 10px;
-    min-width: 300px;
+    min-width: 200px;
     margin-bottom: 15px;
 }
- 
-.card-hover:hover {
-    color: #007AFF;
-} 
-
 
 .card-header {
     display: flex;
@@ -54,7 +34,7 @@ a.card {
 
 .card-footer {
     display: flex;
-    gap: 35px;
+    gap: 25px;
 }
 
 .card-footer p {
@@ -63,6 +43,17 @@ a.card {
     font-weight: 600;
     text-transform: capitalize !important;
 
+}
+
+.card-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50% 50%;
+    margin-top: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #262626;
 }
 
 @media (max-width: 600px) {

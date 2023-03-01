@@ -33,6 +33,9 @@ class Cards(BaseModel):
     dateUpdated: str = ""
     coverImage: str = ""    
     readTime: int = 1
+    isInfographic: bool = False
+    category: str = "SE"
+    author: str = "Stephen Sanwo"
 
 class Links(BaseModel):
     id: str = ""
