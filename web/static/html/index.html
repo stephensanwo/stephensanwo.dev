@@ -1,0 +1,93 @@
+{% extends "base.html" %} {% block content %}
+<div class="page-content">
+  <div class="breadcrumb">
+    <span>
+      <p class="disabled">Home</p>
+      <span class="breadcrumb-divider">/</span>
+    </span>
+  </div>
+  <section class="header-profile">
+    <div class="display-image">
+      <img
+        src="https://avatars.githubusercontent.com/u/49814040?v=4"
+        alt="Stephen Sanwo"
+      />
+    </div>
+    <div class="header-profile-content">
+      <div>
+        <h1>Stephen Sanwo</h1>
+        <h6>
+          Fullstack Software Engineering | Artificial Intelligence Engineering |
+          Open-Source Contributor | Technical Writer | Creator of Hypercompose,
+          DevNotes & OpenWorkflow, AI Chatbot Handbook
+        </h6>
+      </div>
+      <a
+        class="button button-secondary"
+        href="mailto:stephen.sanwo@icloud.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <h6>Collaborate with Me</h6>
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            width="16"
+            height="16"
+            fill="white"
+            style="mix-blend-mode: multiply"
+          />
+          <path
+            d="M5 3V4H11.295L3 12.295L3.705 13L12 4.705V11H13V3H5Z"
+            fill="white"
+          />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <section class="links">
+    {% for link in data.links %} {% if link.actions %}
+    <div style="margin-top: 10px">{{link.actions | safe}}</div>
+    {% endif %}
+    <a class="link" href="{{link.url}}">
+      <div class="link-content">
+        <div>
+          <h4>{{link.title | safe}}</h4>
+          <div class="link-icon">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                width="16"
+                height="16"
+                fill="white"
+                style="mix-blend-mode: multiply"
+              />
+              <path
+                d="M5 3V4H11.295L3 12.295L3.705 13L12 4.705V11H13V3H5Z"
+                fill="#000"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="link-description">
+          <small>{{link.description | safe}}</small>
+        </div>
+      </div>
+    </a>
+
+    {% endfor %}
+  </section>
+</div>
+
+{% endblock %}
