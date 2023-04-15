@@ -1,4 +1,0 @@
-
-class WebMicroserviceException(Exception):
-    pass
-

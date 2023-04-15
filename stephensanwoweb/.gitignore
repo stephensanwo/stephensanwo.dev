@@ -1,8 +1,0 @@
-env
-.env
-__pycache__
-node_modules
-.idea
-settings.yml
-https
-.pytest_cache

@@ -1,2 +1,9 @@
 nginx
 stephensanwo-assets
+stephensanwo-deploy
+
+dist
+.vscode
+docker-compose.yml
+
+.DS_Store
