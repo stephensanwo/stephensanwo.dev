@@ -1,0 +1,42 @@
+title: ATM Analytics Enterprise Application
+slug: atm-analytics
+notification: False
+notification_message: ""
+content: Project
+breadcrumb:
+  - page: Projects
+    page_url: "/"
+meta:
+  product: ATM Analytics Enterprise Application
+  title: ATM Analytics Enterprise Application | Stephen Sanwo
+  description: A data-driven enterprise software application that automates the monitoring and reconciliation of Automated Teller Machines (ATMs) for Banks
+  type: website
+  url: https://projects.stephensanwo.dev/atm-analytics
+  image: ""
+  tags: 
+    - Automation
+    - Financial Services
+    - Big Data Analytics
+    - Data-Driven Software
+  authors: 
+    - Stephen Sanwo
+data:
+  title: KPMG Projects
+  urls: []
+  caption: A data-driven enterprise software application that automates the monitoring and reconciliation of Automated Teller Machines (ATMs) for Banks
+  tags: 
+    - Automation
+    - Financial Services
+    - Big Data Analytics
+    - Data-Driver Software
+  body:
+    - type: markdown
+      content: |
+        #### ATM Analytics Enterprise Application for Nigerian Commercial Banks
+
+        An event-driven microservice and web application, that automates the analysis of unstructured log data from thousands of ATM Machines in real time, increasing operational efficiency for ATM monitoring teams by at least 99%.
+
+        ![ATM Reconciliation](https://imagedelivery.net/QvztslYf_CbfgwmRjfn0OA/aa5cd2fb-d5ff-4f19-96b9-3e97d3812c00/public)
+
+  cards: []
+  links: []

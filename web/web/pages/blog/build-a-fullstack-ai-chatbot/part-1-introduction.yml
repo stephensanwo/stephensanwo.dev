@@ -1,0 +1,117 @@
+title: Build a Fullstack AI Chatbot Part 1 - Introduction
+slug: build-a-fullstack-ai-chatbot/part-1-introduction
+notification : False
+notification_message : ''
+content: AI
+breadcrumb :
+  - page: Blog
+    page_url: "/"
+  - page: Fullstack AI Chatbot Series
+    page_url: /build-a-fullstack-ai-chatbot/series
+meta:
+  product: Fullstack AI Chatbot Series
+  title : Build a Fullstack AI Chatbot Part 1 - Introduction
+  description : This tutorial will take you through a step-by-step approach to building a fullstack intelligent AI-based chat system, with Redis, GPT Python, FastAPI  
+  type : article
+  url : https://blog.stephensanwo.dev/build-a-fullstack-ai-chatbot/part-1-introduction
+  image : https://imagedelivery.net/QvztslYf_CbfgwmRjfn0OA/49a26f2b-f4e1-48f2-bcf1-ae7c2e5c7c00/public
+  tags: 
+    - Artificial Intelligence
+    - Chatbot
+    - Redis
+    - GPT
+    - Python
+  authors: 
+    - Stephen Sanwo
+data:
+  title: Build a Fullstack AI Chatbot Part 1 - Introduction
+  urls:
+    - id: 1
+      url: ''
+      title: Edit this Page
+    - id: 2
+      url: 'https://github.com/stephensanwo/fullstack-ai-chatbot'
+      title: Project Source Code
+  caption: This tutorial will take you through a step-by-step approach to building a fullstack intelligent AI-based chat system, with Redis, GPT Python, FastAPI
+  tags: 
+    - Artificial Intelligence
+    - Chatbot
+    - Redis
+    - GPT
+    - Python
+  body:
+    - type: markdown
+      content: |
+        
+        In order to build a working full-stack application, there are so many moving parts to think about. And you'll need to make many decisions that will be critical to the success of your app.
+        For example, what language will you use and what platform will you deploy on? Are you going to deploy a containerised software on a server, or make use of serverless functions to handle the backend? Do you plan to use third-party APIs to handle complex parts of your application, like authentication or payments? Where do you store the data?
+        In addition to all this, you'll also need to think about the user interface, design and usability of your application, and much more.
+        This is why complex large applications require a multifunctional development team collaborating to build the app.
+        One of the best ways to learn how to develop full stack applications is to build projects that cover the end-to-end development process. You'll go through designing the architecture, developing the API services, developing the user interface, and finally deploying your application.
+        So this tutorial will take you through the process of building an AI chatbot to help you learn these concepts in depth.
+        Some of the topics we will cover include:
+        - How to build APIs with Python, FastAPI, and WebSockets
+        - How to build real-time systems with Redis
+        - How to build a chat User Interface with React
+        **Important Note:**
+        
+        This is an intermediate full stack software development project that requires some basic Python and JavaScript knowledge.
+        I've carefully divided the project into sections to ensure that you can easily select the phase that is important to you in case you do not wish to code the full application.
+        You can download the full repository on [My Github here](https://github.com/stephensanwo/fullstack-ai-chatbot).
+        #### Application Architecture
+        Sketching out a solution architecture gives you a high-level overview of your application, the tools you intend to use, and how the components will communicate with each other.
+        I have drawn up a simple architecture below using [draw.io](http://draw.io):
+        ![full-stack-chatbot-architecture.png](https://imagedelivery.net/QvztslYf_CbfgwmRjfn0OA/9485456a-cea2-43cf-439d-80fc9fd39600/public)
+        Let's go over the various parts of the architecture in more detail:
+        - **Client/User Interface:**
+        We will use React version 18 to build the user interface. The Chat UI will communicate with the backend via WebSockets.
+        - **GPT-J-6B and Huggingface Inference API:**
+        GPT-J-6B is a generative language model which was trained with 6 Billion parameters and performs closely with OpenAI's GPT-3 on some tasks.
+        I have chosen to use GPT-J-6B because it is an open-source model and doesn’t require paid tokens for simple use cases.
+        Huggingface also provides us with an on-demand API to connect with this model pretty much free of charge. You can read more about [GPT-J-6B](https://huggingface.co/EleutherAI/gpt-j-6B?text=My+name+is+Teven+and+I+am) and [Hugging Face Inference API](https://huggingface.co/inference-api).
+        - **Redis:**
+        When we send prompts to GPT, we need a way to store the prompts and easily retrieve the response. We will use Redis JSON to store the chat data and also use Redis Streams for handling the real-time communication with the huggingface inference API.
+        Redis is an in-memory key-value store that enables super-fast fetching and storing of JSON-like data. For this tutorial, we will use a managed free Redis storage provided by [Redis Enterprise](https://redis.info/3NBGJRT) for testing purposes.
+        - **Web Sockets and the Chat API:**
+        To send messages between the client and server in real-time, we need to open a socket connection. This is because an HTTP connection will not be sufficient to ensure real-time bi-directional communication between the client and the server.
+        We will be using FastAPI for the chat server, as it provides a fast and modern Python server for our use. [Check out the FastAPI documentation](https://fastapi.tiangolo.com/advanced/websockets/?h=web)) to learn more about WebSockets.
+        #### How to Set Up the Development Environment
+        You can use your desired OS to build this app - I am currently using MacOS, and Visual Studio Code. Just make sure you have Python and NodeJs installed.
+        To set up the project structure, create a folder named`fullstack-ai-chatbot`. Then create two folders within the project called `client` and `server`. The server will hold the code for the backend, while the client will hold the code for the frontend.
+        Next within the project directory, initialize a Git repository within the root of the project folder using the "git init" command. Then create a .gitignore file by using "touch .gitignore":
+        ```bash
+        git init
+        touch .gitignore
+        ```
+        In the next section, we will build our chat web server using FastAPI and Python
+        
+        This Article is part of a series on building full-stack intelligent chatbots with tools like Python, React, Huggingface, Redis, and so on. You can follow the full series on my blog: [https://blog.stephensanwo.dev - AI ChatBot Series](https://blog.stephensanwo.dev/build-a-fullstack-ai-chatbot/series)
+
+        **You can download the full repository on [My Github Repository](https://github.com/stephensanwo/fullstack-ai-chatbot)**
+      
+  cards: []
+
+  links:
+    - id: "2"
+      title: Build a Fullstack AI Chatbot Part 2 - Chat Server
+      description: In this section, we will build the chat server using FastAPI to communicate with the user. We will use WebSockets to ensure bi-directional communication between the client and server so that we can send responses to the user in real-time.
+      status: ""
+      url: "/build-a-fullstack-ai-chatbot/part-2-chat-server"
+      actions: "<h6>Next articles in the series</h6>"
+      product: ""
+      
+    - id: "3"
+      title: Build a Fullstack AI Chatbot Part 3 - Real-Time Systems with Redis
+      description: In this part of the tutorial, we will cover; How to connect to a Redis Cluster in Python and set up a Redis Client, How to store and retrieve data with Redis JSON and How to set up Redis Streams as message queues between a web server and worker environment
+      status: ""
+      url: "/build-a-fullstack-ai-chatbot/part-3-real-time-systems-with-redis"
+      actions: ""
+      product: ""
+      
+    - id: "4"
+      title: Build a Fullstack AI Chatbot Part 4 - Add Intelligence to Chatbots
+      description: In this section, we will focus on building a wrapper to communicate with the transformer model, send prompts from a user to the API in a conversational format, and receive and transform responses for our chat application.
+      status: ""
+      url: "/build-a-fullstack-ai-chatbot/part-4-add-intelligence-to-chatbots"
+      actions: ""
+      product: ""

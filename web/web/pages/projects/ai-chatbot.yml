@@ -1,0 +1,79 @@
+title: GPT Powered Conversational AI Chatbot
+slug: ai-chatbot
+notification: False
+notification_message: ""
+content: Project
+breadcrumb:
+  - page: Projects
+    page_url: "/"
+meta:
+  product: GPT Powered AI Chatbot
+  title: GPT Powered Conversational AI Chatbot
+  description: A conversational Artificial Intelligence based chatbot built with Python, Redis, React, FastAPI and GPT-J-6B language model on Huggingface  
+  type: website
+  url: https://projects.stephensanwo.dev/ai-chatbot
+  image: https://imagedelivery.net/QvztslYf_CbfgwmRjfn0OA/79fc7213-4b89-4aa4-51b0-e049c2332100/public
+  tags: 
+    - GPT 
+    - Chatbot 
+    - Redis
+    - React
+    - FastAPI
+    - Open Source
+  authors: 
+    - Stephen Sanwo
+data:
+  title: GPT Powered Conversational AI Chatbot
+  urls:
+    - id: 1
+      url: 'https://github.com/stephensanwo/fullstack-ai-chatbot'
+      title: Fork on Github
+
+    - id: 2
+      url: '/ai-chatbot'
+      title: Live Product Page
+
+  caption: A conversational Artificial Intelligence based chatbot built with Python, Redis, React, FastAPI and GPT-J-6B language model on Huggingface
+
+  tags: 
+    - GPT 
+    - Chatbot 
+    - Redis
+    - React
+    - FastAPI
+    - Open Source
+
+  body:
+
+    - type: paragraph
+      content: 
+      - "Featured on FreeCodeCamp <a href = 'https://www.freecodecamp.org/news/how-to-build-an-ai-chatbot-with-redis-python-and-gpt/'>https://www.freecodecamp.org/news/how-to-build-an-ai-chatbot-with-redis-python-and-gpt/</a>"
+
+    - type: warning
+      content: "APPLICATION MAY BE UNSTABLE - This application is a development build for testing purposes only. It is not intended for production use, nor does it guarantee accuracy of the result."
+
+    - type: paragraph
+      content: 
+      - "<strong>Chat Session</strong> <br/> <p class='paragraph'>Create a new chat session</p>"
+
+    - type: image
+      title: Chat session page
+      url: "https://imagedelivery.net/QvztslYf_CbfgwmRjfn0OA/f58809e5-2085-4a8a-aa76-8eb030b79800/public"
+
+    - type: paragraph
+      content: 
+      - "<strong>Chat Screen</strong> <br/> <p class='paragraph'>Send prompts and receive AI responses</p>"
+
+    - type: error
+      content: "WARNING - It is hard to predict how the AI will respond to particular prompts and offensive content may occur without warning"
+
+    - type: warning
+      content: "APPLICATION RATE LIMITS - Due to the limit on the free tokens provided by the Huggingface Intereference API, responses may not always be retured to the user for every chat"
+
+    - type: image
+      title: Chat Screen
+      url: "https://imagedelivery.net/QvztslYf_CbfgwmRjfn0OA/4dcc4437-4f7f-49ad-0770-e926414b1600/public"
+
+  cards: []
+
+  links: []

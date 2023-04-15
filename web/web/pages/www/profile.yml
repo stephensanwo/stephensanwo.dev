@@ -1,0 +1,81 @@
+title: Fullstack Software and AI Engineer
+slug: "profile"
+notification: False
+notification_message: ""
+content: Profile
+breadcrumb: []
+meta:
+  product: "Profile"
+  title: Stephen Sanwo | Fullstack Software and AI Engineer
+  description: Senior Fullstack Software Engineer, Open-Source AI & Software Engineer, Technical Writer, Creator of Hyper, Axon, OpenWorkflow & AI Chatbot Handbook 
+  type: website
+  url: https://www.stephensanwo.dev/profile
+  image: https://www.stephensanwo.dev/assets/icon/icon-1024.svg
+  tags: []
+  authors: 
+    - Stephen Sanwo
+data:
+  title: ""
+  urls: []
+  caption: ""
+  tags: []
+  body: []
+  cards: []
+extras:
+  headline: "Senior Fullstack Software Engineer @Accenture/Infinity Works | Ex. KPMG | Open-Source AI & Software Engineer | Technical Writer | Creator of Hyper, Axon, OpenWorkflow & AI Chatbot Handbook"
+  
+  about_me: "I am a Senior Fullstack Software, and AI Solutions Engineer. I focus on architecting data-driven software that solve domain problems in complex data-oriented environments, and specific user cases in financial services, and retail. Currently, I am a Senior Software Engineer with Accenture UK, and prior to that, I lead a Solutions Development team at KPMG, where I focused on developing and maintaining scalable analytics software solutions some of which includes KPMG's ATM Reconciliation Application for Banks."
+
+  work_history:                                                           
+    - title: "Software Engineering Manager - Infinity Works, part of Accenture UK"
+      period: "Janurary 2023 - Current" 
+
+    - title: "Manager & Technical Lead - KPMG Nigeria"
+      period: "September 2015 - October 2022"
+    
+    - title: "Open Source Software and AI Engineer & Technical Writer (Github, FreeCodeCamp)"
+      period: "January 2020 - Current"
+
+  competence:
+    - "Data-driven Software"
+    - Language Models (LLMs)
+    - Deep Learning 
+    - Microservices 
+    - Software Architecture 
+    - User Interface Design 
+    - Web and Mobile UI Development 
+    - Software Systems Design 
+    - Distributed Software 
+    - REST APIs 
+    - Event-driven Software 
+    - Transformers
+  
+  stack:
+    - Python
+    - JavaScript
+    - TypeScript
+    - Go
+    - DynamoDB
+    - HTML5
+    - CSS
+    - FastAPI
+    - Flask
+    - NodeJs
+    - Pytorch
+    - Tensorflow
+    - ReactJs
+    - React Native
+    - PostgreSQL
+    - MongoDB
+    - Redis
+    - DynamoDB
+    - Kafka
+    - PySpark
+    - AWS
+    - AWS CDK
+    - Linux
+    - Docker
+    - Kubernetes
+    - Git
+    - Github Actions
+    - Nginx

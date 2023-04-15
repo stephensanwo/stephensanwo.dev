@@ -1,0 +1,63 @@
+title: Fullstack Software and AI Engineer
+slug: ""
+notification: False
+notification_message: ""
+content: Index
+breadcrumb: []
+meta:
+  product: ""
+  title: Stephen Sanwo | Fullstack Software and AI Engineer
+  description: Senior Fullstack Software Engineer, Open-Source AI & Software Engineer, Technical Writer, Creator of Hyper, Axon, OpenWorkflow & AI Chatbot Handbook  
+  type: website
+  url: https://www.stephensanwo.dev
+  image: https://www.stephensanwo.dev/assets/icon/icon-1024.svg
+  tags: []
+  authors: 
+    - Stephen Sanwo
+data:
+  title: ""
+  urls: []
+  caption: ""
+  tags: []
+  body: []
+  cards: []
+  links:
+    - id: "1"
+      title: Profile
+      description: I am a Fullstack Software, and Artificial Intelligence Solutions Engineer. I focus on architecting data-driven software that solve domain problems in complex data-oriented environments, and specific user cases in financial services, and retail. I am an Open-Source Contributor, Technical Writer and the creator of <strong>Hyper</strong>, <strong>Axon</strong>, <strong>OpenWorkflow</strong>, & <strong>AI Chatbot Handbook</strong>
+      url: /profile
+
+    - id: "2"
+      title: Engineering Blog
+      description: I write about Distributed Software Systems, APIs and Microservices, Software Development, Machine Learning, Deep Learning & Artificial intelligence, Web & Mobile Development
+      url: https://blog.stephensanwo.dev
+
+    - id: "3"
+      title: Artificial Intelligence Playground
+      description: Testing playground for open-source artificianl inelligence models. The tools deployed on AI Playground are built mostly with publicly available open source models like OpenAI's GPT3, GPT-J-6B, HuggingFace Models etc
+      url: /ai-playground
+
+    - id: "4"
+      title: Projects
+      description: Access all my open-source projects
+      url: https://projects.stephensanwo.dev
+
+    - id: "8"
+      title: AI Chatbot Handbook - Build a fullstack AI Chatbot (FreeCodeCamp Publication)
+      description: The AI Chatbot Handbook; an intermediate fullstack software engineering series on how to build an AI Chatbot with tools like Redis, Python, and GPT. Published on FreeCodeCamp, in collaboration with Redis Enterprise
+      url: "https://www.freecodecamp.org/news/how-to-build-an-ai-chatbot-with-redis-python-and-gpt/"
+ 
+    - id: "7"
+      title: Axon - Mindmap Notes for Techies
+      description: Mindmap Notes for Techies
+      url: "https://projects.stephensanwo.dev/axon-v1"
+
+    - id: "5"
+      title: Hyper - AI Knowledge Bot (Alpha)
+      description: Hyper is an AI enabled knowledge bot, that uses GPT4 to power knowledge queries, with the aim of tackling information overload. GPT4 is trained on mostly historical data, and does not have the context of your everyday documents like lecture notes, legal contracts etc. With Hyper, you can add this missing context to GPT4 by providing it with your data and documents then ask questions right within chat interfaces you are already familiar with.
+      url: "https://projects.stephensanwo.dev/hyper-alpha"
+
+    - id: "6"
+      title: Open Workflow
+      description: Open Workflow is an open source low-code analytics automation workflow, that decouples monolithic analytics projects into re-usable functional components that can be chained together to solve a problem. Open Workflow improves the collaboration between business process owners (who are typically non-coders), and developers, by providing an infrastructure where developers can share pre-written functions, targeted at solving specific use cases, which consumers can then mix and match while building their workflows using a simple user interface
+      url: "https://projects.stephensanwo.dev/open-workflow-v0.1"

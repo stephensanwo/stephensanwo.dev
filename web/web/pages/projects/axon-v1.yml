@@ -1,0 +1,48 @@
+title: Axon - Mindmap & Notes for Techies
+slug: axon-v1
+notification: False
+notification_message: ""
+content: OpenSource
+breadcrumb:
+  - page: Projects
+    page_url: "/"
+meta:
+  product: Axon Mindmap & Notes
+  title: Axon - Mindmap Notes for Techies
+  description: Axon - Mindmap Notes for Techies
+  type: website
+  url: https://projects.stephensanwo.dev/axon-v1
+  image: ""
+  tags: 
+    - Axon 
+    - Go
+    - TypeScript
+    - React
+    - OpenSource
+  authors: 
+    - Stephen Sanwo
+data:
+  title: Axon - Mindmap Notes for Techies
+
+  urls:
+    - id: 1
+      url: 'https://github.com/stephensanwo/axon'
+      title: Fork on Github
+
+    - id: 2
+      url: 'https://www.getaxon.com'
+      title: Live Product Page
+
+  caption: Axon - Mindmap Notes for Techies
+
+  tags: 
+    - Mind Mapping
+    - Open Source 
+
+  body:
+    - type: markdown
+      content: |
+      
+  cards: []
+
+  links: []

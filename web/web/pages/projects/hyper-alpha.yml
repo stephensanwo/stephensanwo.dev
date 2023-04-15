@@ -1,0 +1,49 @@
+title: Hyper - AI Powered Knowledge Bot
+slug: axon-v1
+notification: False
+notification_message: ""
+content: OpenSource
+breadcrumb:
+  - page: Projects
+    page_url: "/"
+meta:
+  product: Hyper - AI Powered Knowledge Bot
+  title: Hyper - AI Powered Knowledge Bot (Alpha)
+  description: Hyper is an AI enabled knowledge bot, that uses GPT4 to power knowledge queries, with the aim of tackling information overload
+  type: website
+  url: https://projects.stephensanwo.dev/hyper-alpha
+  image: ""
+  tags: 
+    - Artificial Intelligence
+    - GPT 3.5
+    - GPT 4
+
+  authors: 
+    - Stephen Sanwo
+data:
+  title: Hyper - AI Powered Knowledge Bot (Alpha)
+
+  urls:
+    - id: 1
+      url: 'https://github.com/stephensanwo/hyper'
+      title: Fork on Github
+
+    - id: 2
+      url: 'https://www.hypergpt.xyz'
+      title: Live Product Page
+
+  caption: Hyper - AI Powered Knowledge Bot (Alpha)
+
+  tags: 
+    - Artificial Intelligence
+    - GPT 3.5
+    - GPT 4
+
+  body:
+    - type: markdown
+      content: |
+        Hyper is an AI enabled knowledge bot, that uses GPT4 to power knowledge queries, with the aim of tackling information overload. GPT4 is trained on mostly historical data, and does not have the context of your everyday documents like lecture notes, legal contracts etc. With Hyper, you can add this missing context to GPT4 by providing it with your data and documents then ask questions right within chat interfaces you are already familiar with
+  
+  cards: []
+
+  links: []
