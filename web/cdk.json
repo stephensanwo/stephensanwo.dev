@@ -1,0 +1,39 @@
+{
+  "app": "python3 deploy.py",
+  "watch": {
+    "include": [
+      "**"
+    ],
+    "exclude": [
+      "README.md",
+      "cdk*.json",
+      "requirements*.txt",
+      "source.bat",
+      "**/__init__.py",
+      "python/__pycache__",
+      "tests"
+    ]
+  },
+  "context": {
+    "stackProps":{
+      "staging" :{
+        "namespace": "stephensanwodev-staging",
+        "domain_name": "",
+        "domain_certificate_arn": "",
+        "enable_s3_website_endpoint": false,
+        "origin_custom_header_parameter_name": "",
+        "hosted_zone_id": "",
+        "hosted_zone_name": ""
+      },
+      "production": {
+        "namespace": "stephensanwodev-deployment",
+        "domain_name": "stephensanwo.dev",
+        "domain_certificate_arn": "",
+        "enable_s3_website_endpoint": true,
+        "origin_custom_header_parameter_name": "/prod/stephensanwo-deploy/origin_custom_header_parameter_name/referer",
+        "hosted_zone_id": "Z01631351XCNPBABAN65X",
+        "hosted_zone_name": "stephensanwo.dev"
+      }
+    }
+  }
+}
