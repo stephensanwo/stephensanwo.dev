@@ -25,7 +25,7 @@ async def test_blog_data_parser(blog_urls):
         assert page.meta.title != ""
         assert page.meta.url != []
         assert page.meta.product != ""
-        #  TOD Add More tests
+        #  TODO Add More tests
 
 
 @pytest.mark.asyncio
