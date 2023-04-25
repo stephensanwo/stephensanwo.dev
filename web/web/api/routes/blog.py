@@ -17,34 +17,47 @@ router = APIRouter()
 async def blog_list(
         request: Request,
         ctx: WebMicroserviceContext = Depends(get_context)):
+    build_config = ctx.settings.build_config
+    ROOT = os.path.dirname(os.path.abspath("./web"))
 
-    urls = get_page_urls(dir="web/pages/",
-                         page="blog", include_subdirectories=True)
+    urls = get_page_urls(
+        dir=build_config.domains["blog"].static_dir,
+        include_subdirectories=True)
+
     cards: list[Cards] = []
 
     # TODO: Handle pagination
     for url in urls[:9]:
-        page = await fetch_page_data(url[1])
-        cards.append(
-            Cards(
-                id=f"/blog/{url[0]}",
-                title=page.title,
-                description=page.data.caption,
-                url=f"/blog/{url[0]}",
-                dateUpdated=page.last_update.split(" ")[0],
-                coverImage=page.meta.image,
-                readTime=math.ceil(
-                    len(page.data.body[0].content) / (250 * 4.7)),
-                isInfographic=True if page.meta.product == "Infographics"
-                else False,
-                category=f"{page.data.tags[0]}",
-                author=page.meta.authors[0]
-            ).dict()
-        )
+        page: Page = await fetch_page_data(
+            os.path.join(ROOT,
+                         "web/pages/", f"{url[1]}", f"{url[0]}.yml"))
+        read_time = 1
+        try:
+            read_time = math.ceil(
+                len(page.data.body[0].content) / (250 * 4.7))
+        except IndexError:
+            pass
+
+        if url[0] not in ["index", "404"]:
+            cards.append(
+                Cards(
+                    id=f"{url[1]}/{url[0]}",
+                    title=page.title,
+                    description=page.data.caption,
+                    url=f"{url[1]}/{url[0]}",
+                    dateUpdated=page.last_update.split(" ")[0],
+                    coverImage=page.meta.image,
+                    readTime=read_time,
+                    isInfographic=True if page.meta.product == "Infographics"
+                    else False,
+                    category=f"{page.data.tags[0]}",
+                    author=page.meta.authors[0]
+                ).dict()
+            )
 
     # Build blog list page
     ROOT = os.path.dirname(os.path.abspath("./web"))
-    blog_path = os.path.join(ROOT, "web/pages/blog.yml")
+    blog_path = os.path.join(ROOT, "web/pages/blog/index.yml")
     blog_list_page: Page = await fetch_page_data(blog_path)
 
     blog_list_page.data.cards = list(reversed(cards))

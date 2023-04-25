@@ -36,7 +36,6 @@ def get_page_urls(dir: str,
 
 
 async def fetch_page_data(file_loc: str) -> Page:
-    print(file_loc)
     with open(file_loc, "r", encoding="utf-8") as f:
         config = yaml.safe_load(f)
         page = Page.parse_obj(config)

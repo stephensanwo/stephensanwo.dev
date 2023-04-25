@@ -14,7 +14,7 @@ router = APIRouter()
 async def projects(request: Request,
                    ctx: WebMicroserviceContext = Depends(get_context)):
 
-    url = get_page_url(dir="web/pages", page="projects")
+    url = get_page_url(dir="web/pages/projects", page="index")
     page: Page = await fetch_page_data(url[1])
     page.request = request
 
