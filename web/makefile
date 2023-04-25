@@ -3,3 +3,6 @@ start_babel_watch:
 
 test:
 	python -m pytest -v
+
+build:
+	python build.py
