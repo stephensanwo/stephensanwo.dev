@@ -42,7 +42,10 @@ data:
   body:
     - type: markdown
       content: |
-        
+        <strong>Table of Content</strong>
+
+        [TOC]
+                
         In order to build a working full-stack application, there are so many moving parts to think about. And you'll need to make many decisions that will be critical to the success of your app.
         For example, what language will you use and what platform will you deploy on? Are you going to deploy a containerised software on a server, or make use of serverless functions to handle the backend? Do you plan to use third-party APIs to handle complex parts of your application, like authentication or payments? Where do you store the data?
         In addition to all this, you'll also need to think about the user interface, design and usability of your application, and much more.

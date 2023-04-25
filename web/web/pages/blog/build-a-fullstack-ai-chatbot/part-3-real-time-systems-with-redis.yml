@@ -42,6 +42,10 @@ data:
   body:
     - type: markdown
       content: |
+      
+        <strong>Table of Content</strong>
+
+        [TOC]
         
         In this part of the tutorial, we will cover the following:
 

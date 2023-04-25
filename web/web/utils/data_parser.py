@@ -1,6 +1,7 @@
 import yaml
 from web.types.pages import (Page)
 import markdown
+from markdown.extensions.toc import TocExtension
 import os
 
 ROOT = os.path.dirname(os.path.abspath("./web"))
@@ -43,8 +44,8 @@ async def fetch_page_data(file_loc: str) -> Page:
         try:
             for body in page.data.body:
                 body.content = markdown.markdown(
-                    body.content, extensions=['fenced_code'])
-
+                    body.content,
+                    extensions=['fenced_code', TocExtension(baselevel=1)])
         except Exception:
             pass
 

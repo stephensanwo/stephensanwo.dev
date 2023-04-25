@@ -43,7 +43,11 @@ data:
 
     - type: markdown
       content: |
+        
+        <strong>Table of Content</strong>
 
+        [TOC]
+        
         #### How to Get Started with Huggingface
 
         We will not be building or deploying any language models on Hugginface. Instead, we'll focus on using Huggingface's accelerated inference API to connect to pre-trained models. The model we will be using is the [GPT-J-6B Model provided by EleutherAI](https://huggingface.co/EleutherAI/gpt-j-6B). It's a generative language model which was trained with 6 Billion parameters. Huggingface provides us with an on-demand limited API to connect with this model pretty much free of charge. To get started with Huggingface, [Create a free account](https://huggingface.co/pricing). In your settings, [generate a new access token](https://huggingface.co/settings/tokens). For up to 30k tokens, Huggingface provides access to the inference API for free. You can [Monitor your API usage here](https://api-inference.huggingface.co/dashboard/usage). Make sure you keep this token safe and don't expose it publicly.

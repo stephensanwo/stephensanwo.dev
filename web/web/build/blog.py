@@ -42,10 +42,10 @@ async def build_blog_list(ctx: WebMicroserviceContext):
 
             cards.append(
                 Cards(
-                    id=f"{url[1]}/{url[0]}",
+                    id=f"{url[1].split('blog/')[1]}/{url[0]}",
                     title=page.title,
                     description=page.data.caption,
-                    url=f"{url[1]}/{url[0]}",
+                    url=f"{url[1].split('blog/')[1]}/{url[0]}",
                     dateUpdated=page.last_update.split(" ")[0],
                     coverImage=page.meta.image,
                     readTime=read_time,

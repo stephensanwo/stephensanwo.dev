@@ -42,7 +42,10 @@ data:
   body:
     - type: markdown
       content: |
-        
+        <strong>Table of Content</strong>
+
+        [TOC]
+                
         #### How to Set Up the Python Environment
 
         To start our server, we need to set up our Python environment. Open the project folder within VS Code, and open up the terminal.
