@@ -1,5 +1,6 @@
 """
-This file (test_spage_parse.py) contains the unit tests for the 
+This file (test_spage_parse.py)
+contains the unit tests for the
 yml page parsers
 """
 from web.utils.data_parser import (fetch_page_data)
