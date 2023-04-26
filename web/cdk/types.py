@@ -9,10 +9,10 @@ class DeploymentEnv(str, Enum):
 
 
 class CDKConfig(BaseModel):
-    account: str = ""
+    account: str = None
     region: str = "eu-west-1"
-    description: str
-    deployment_environment: str  # staging | production
+    description: str = None
+    deployment_environment: str = None  # staging | production
 
     @validator('deployment_environment')
     def validate_deployment_environment(cls, value):
