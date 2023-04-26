@@ -7,43 +7,31 @@ on:
     branches: [ "main" ]
 
 jobs:
-  aws_cdk:
+  deploy:
+
     runs-on: ubuntu-latest
+
     steps:
-
-      - name: cdk diff
-        uses: youyo/aws-cdk-github-actions@v2
+      - uses: actions/checkout@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v3
         with:
-          cdk_subcommand: 'diff'
-          working_dir: "web"
-          cdk_stack: 'StaticSiteStack'
-          actions_comment: true
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_DEFAULT_REGION: 'eu-west-1'
-
-      - name: cdk deploy
-        uses: youyo/aws-cdk-github-actions@v2
+          node-version: '16.16.0'      
+      - name: Install AWS CDK
+        run : 'npm install -g aws-cdk'
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
         with:
-          cdk_subcommand: 'deploy'
-          working_dir: "web"
-          cdk_stack: 'StaticSiteStack'
-          cdk_args: '--require-approval never'
-          actions_comment: false
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_DEFAULT_REGION: 'eu-west-1'
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-west-1
+      - name: Run AWS CDK Synth
+        run: |
+            cd web
+            cdk synth 
+  
+      - name: Deploy AWS CDK
+        run: |
+            cd web
+            cdk deploy --require-approval never
         
-      - name: cdk synth
-        uses: youyo/aws-cdk-github-actions@v2
-        with:
-          cdk_subcommand: 'synth'
-          working_dir: "web"
-          cdk_stack: 'StaticSiteStack'
-          cdk_version: '2.70.0'
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_DEFAULT_REGION: 'eu-west-1'
