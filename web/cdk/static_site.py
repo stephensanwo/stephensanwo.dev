@@ -232,7 +232,8 @@ class StaticSitePublicS3(Construct):
                                        prune=False,
                                        distribution=self.distribution,
                                        content_type="text/xml",
-                                       exclude=["*.html"]
+                                       exclude=["*"],
+                                       include=["*.xml"]
                                        )
 
     def _create_static_files_deployment(self):
