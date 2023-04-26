@@ -34,6 +34,10 @@ jobs:
           cd web
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+      - name: Build static files
+        run: |
+          cd web
+          python build.py
       - name: Run AWS CDK Synth
         env:
           AWS_ACCOUNT: '${{ secrets.AWS_ACCOUNT }}'
