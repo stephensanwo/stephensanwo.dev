@@ -20,4 +20,4 @@ class Metadata(BaseModel):
 
 
 class Secrets(BaseModel):
-    authlib_session_secret: str
+    authlib_session_secret: str = None

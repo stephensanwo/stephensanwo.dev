@@ -7,10 +7,10 @@ class OauthProviders(str, Enum):
 
 
 class OauthSettings(BaseModel):
-    type: str = ""
-    client_id: str = ""
-    client_secret: str = ""
-    access_token_url: str = ""
-    authorize_url: str = ""
-    redirect_uri: str = ""
-    api_base_url: str = ""
+    type: str = None
+    client_id: str = None
+    client_secret: str = None
+    access_token_url: str = None
+    authorize_url: str = None
+    redirect_uri: str = None
+    api_base_url: str = None
