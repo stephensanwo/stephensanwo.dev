@@ -220,22 +220,6 @@ class StaticSitePublicS3(Construct):
                                        exclude=["*.xml"]
                                        )
 
-        s3_deployment.BucketDeployment(self, f"{self._domain_object.name}-site-xml-files",
-                                       sources=[s3_deployment.Source.asset(
-                                           os.path.join(ROOT, self._domain_object.output_dir))],
-                                       destination_bucket=self.bucket,
-                                       cache_control=[
-                                           s3_deployment.CacheControl.set_public(),
-                                           s3_deployment.CacheControl.max_age(
-                                               Duration.hours(1))
-                                       ],
-                                       prune=False,
-                                       distribution=self.distribution,
-                                       content_type="text/xml",
-                                       exclude=["*"],
-                                       include=["*.xml"]
-                                       )
-
     def _create_static_files_deployment(self):
         ROOT = os.path.dirname(os.path.abspath("./web"))
 
