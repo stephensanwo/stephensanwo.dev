@@ -48,4 +48,4 @@ async def build_project_slug(ctx: WebMicroserviceContext):
 
     generate_sitemap(
         urls=static_generator.cache,
-        output_dir=build_config.domains["projects"].output_dir)
+        output_dir=build_config.domains["projects"].xml_dir)

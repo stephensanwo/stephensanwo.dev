@@ -54,4 +54,4 @@ async def build_pages(ctx: WebMicroserviceContext) -> None:
 
     generate_sitemap(
         urls=static_generator.cache,
-        output_dir=build_config.domains["www"].output_dir)
+        output_dir=build_config.domains["www"].xml_dir)

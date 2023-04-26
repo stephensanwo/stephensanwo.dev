@@ -1,6 +1,7 @@
 import datetime
 from xml.etree import ElementTree as ET
 import os
+from pathlib import Path
 
 
 def generate_sitemap(
@@ -10,9 +11,6 @@ def generate_sitemap(
     xml_root = ET.Element('urlset')
     xml_root.set('xmlns', 'http://www.sitemaps.org/schemas/sitemap/0.9')
 
-    # #  Get sitemap list
-    # with open("/tmp/urls.txt", 'r') as f:
-    #     urls = f.readlines()
     print("Generating sitemap...")
     # Loop through the URLs and add each one to the sitemap XML
     for url in urls:
@@ -22,8 +20,9 @@ def generate_sitemap(
             xml_url, 'lastmod').text = datetime.date.today().isoformat()
 
     # Store the sitemap XML in a dist
-
-    with open(os.path.join(output_dir, 'sitemap.xml'), 'w+') as f:
+    ROOT = os.path.dirname(os.path.abspath("./web"))
+    Path(os.path.join(ROOT, output_dir)).mkdir(parents=True, exist_ok=True)
+    with open(os.path.join(ROOT, output_dir, 'sitemap.xml'), 'w+') as f:
         f.write(ET.tostring(
             xml_root,
             encoding='UTF-8',

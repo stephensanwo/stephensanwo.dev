@@ -1,4 +1,5 @@
 from pydantic import BaseModel
+from typing import Optional
 
 
 class DomainObject(BaseModel):
@@ -7,6 +8,7 @@ class DomainObject(BaseModel):
     redirects_object: dict[str, str]
     static_dir: str
     output_dir: str
+    xml_dir: Optional[str] = None
 
 
 class BuildConfig(BaseModel):

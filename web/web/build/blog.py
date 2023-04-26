@@ -89,7 +89,7 @@ async def build_blog_list(ctx: WebMicroserviceContext):
     await rss.build_rss(
         output_dir=os.path.join(
             ROOT,
-            build_config.domains["blog"].output_dir))
+            build_config.domains["blog"].xml_dir))
 
     # Build blog list page
     blog_list_page: Page = await fetch_page_data(
@@ -109,4 +109,4 @@ async def build_blog_list(ctx: WebMicroserviceContext):
 
     generate_sitemap(
         urls=static_generator.cache,
-        output_dir=build_config.domains["blog"].output_dir)
+        output_dir=build_config.domains["blog"].xml_dir)

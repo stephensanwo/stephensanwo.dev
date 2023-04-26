@@ -75,7 +75,9 @@ def settings() -> WebSettings:
                             "www.stephensanwo.dev": "stephensanwo.dev"
                         },
                         static_dir="web/pages/www",
-                        output_dir="dist/www"
+                        output_dir="dist/www",
+                        xml_dir="dist/xml/www"
+
                     ),
                     "blog": DomainObject(
                         name="blog.stephensanwo.dev",
@@ -83,7 +85,8 @@ def settings() -> WebSettings:
                         redirects_object={
                         },
                         static_dir="web/pages/blog",
-                        output_dir="dist/blog"
+                        output_dir="dist/blog",
+                        xml_dir="dist/xml/blog"
                     ),
                     "projects": DomainObject(
                         name="projects.stephensanwo.dev",
@@ -91,14 +94,15 @@ def settings() -> WebSettings:
                         redirects_object={
                         },
                         static_dir="web/pages/projects",
-                        output_dir="dist/projects"
+                        output_dir="dist/projects",
+                        xml_dir="dist/xml/projects"
                     ),
                     "shared": DomainObject(
                         name="shared.stephensanwo.dev",
                         domain="https://sharded.stephensanwo.dev",
                         redirects_object={},
                         static_dir="web/pages/shared",
-                        output_dir="dist/shared"
+                        output_dir="dist/shared",
                     )
                 }
             )

@@ -1,6 +1,7 @@
 import datetime
 import os
 import xml.etree.ElementTree as ET
+from pathlib import Path
 
 
 class RSS():
@@ -44,6 +45,8 @@ class RSS():
 
     async def build_rss(self, output_dir: str) -> None:
         # Store the sitemap XML in a s3
+        ROOT = os.path.dirname(os.path.abspath("./web"))
+        Path(os.path.join(ROOT, output_dir)).mkdir(parents=True, exist_ok=True)
         with open(os.path.join(output_dir, 'rss.xml'), 'w+') as f:
             f.write(ET.tostring(
                 self.rss,

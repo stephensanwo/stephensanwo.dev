@@ -17,7 +17,8 @@ from aws_cdk import (
     aws_iam as iam,
     aws_ssm as ssm,
     RemovalPolicy,
-    Duration
+    Duration,
+
 )
 from constructs import Construct
 from cdk.types import DomainObject
@@ -89,6 +90,9 @@ class StaticSitePublicS3(Construct):
         # Create the static files deployment
         self._create_static_files_deployment()
 
+        # Create the xml files deployment
+        self._create_xml_files_deployment()
+
     def _get_hosted_zone(self):
         return route53.HostedZone.from_hosted_zone_attributes(
             self,
@@ -157,6 +161,8 @@ class StaticSitePublicS3(Construct):
             website_error_document="404.html",
             removal_policy=RemovalPolicy.DESTROY,
             auto_delete_objects=True,
+            block_public_access=s3.BlockPublicAccess.BLOCK_ACLS,
+            access_control=s3.BucketAccessControl.BUCKET_OWNER_FULL_CONTROL
         )
         bucket_policy = iam.PolicyStatement(
             actions=["s3:GetObject"],
@@ -217,7 +223,6 @@ class StaticSitePublicS3(Construct):
                                        prune=False,
                                        distribution=self.distribution,
                                        content_type="text/html",
-                                       exclude=["*.xml"]
                                        )
 
     def _create_static_files_deployment(self):
@@ -235,3 +240,19 @@ class StaticSitePublicS3(Construct):
                                        ],
                                        prune=False,
                                        distribution=self.distribution)
+
+    def _create_xml_files_deployment(self):
+        ROOT = os.path.dirname(os.path.abspath("./web"))
+
+        if self._domain_object.xml_dir != None:
+            s3_deployment.BucketDeployment(self, f"{self._domain_object.name}-site-xml-files",
+                                        sources=[s3_deployment.Source.asset(
+                                            os.path.join(ROOT, self._domain_object.xml_dir))],
+                                        destination_bucket=self.bucket,
+                                        cache_control=[
+                                            s3_deployment.CacheControl.set_public(),
+                                            s3_deployment.CacheControl.max_age(
+                                                Duration.hours(1))
+                                        ],
+                                        prune=False,
+                                        distribution=self.distribution)

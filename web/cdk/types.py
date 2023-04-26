@@ -1,6 +1,7 @@
 from pydantic import BaseModel, validator
 from enum import Enum
 from web.types.build import BuildConfig
+from typing import Optional
 
 
 class DeploymentEnv(str, Enum):
@@ -28,7 +29,7 @@ class DomainObject(BaseModel):
     redirects_object: dict[str, str]
     static_dir: str
     output_dir: str
-
+    xml_dir: Optional[str] = None
 
 class CDKProps(BaseModel):
     namespace: str

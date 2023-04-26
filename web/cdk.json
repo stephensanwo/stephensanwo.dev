@@ -26,7 +26,7 @@
         "hosted_zone_name": ""
       },
       "production": {
-        "namespace": "stephensanwodev-deployment",
+        "namespace": "stephensanwodev-prod",
         "domain_name": "stephensanwo.dev",
         "domain_certificate_arn": "",
         "enable_s3_website_endpoint": true,
