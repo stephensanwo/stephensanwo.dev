@@ -30,21 +30,26 @@ jobs:
         with:
           python-version: '3.10'
       - name: Install dependencies
-        env:
-            AWS_ACCOUNT: '${{ secrets.AWS_ACCOUNT }}'
-            AWS_REGION: '${{ secrets.AWS_REGION }}'
-            AWS_DEPLOYMENT_ENV: '${{ secrets.AWS_DEPLOYMENT_ENV }}'
-            ENVIRONMENT: '${{ secrets.ENVIRONMENT }}'
         run: |
           cd web
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Run AWS CDK Synth
+        env:
+          AWS_ACCOUNT: '${{ secrets.AWS_ACCOUNT }}'
+          AWS_REGION: '${{ secrets.AWS_REGION }}'
+          AWS_DEPLOYMENT_ENV: '${{ secrets.AWS_DEPLOYMENT_ENV }}'
+          ENVIRONMENT: '${{ secrets.ENVIRONMENT }}'
         run: |
             cd web
             cdk synth 
   
       - name: Deploy AWS CDK
+        env:
+          AWS_ACCOUNT: '${{ secrets.AWS_ACCOUNT }}'
+          AWS_REGION: '${{ secrets.AWS_REGION }}'
+          AWS_DEPLOYMENT_ENV: '${{ secrets.AWS_DEPLOYMENT_ENV }}'
+          ENVIRONMENT: '${{ secrets.ENVIRONMENT }}'
         run: |
             cd web
             cdk deploy --require-approval never
