@@ -18,7 +18,7 @@ data:
   title: "Engineering Blog"
   urls: 
     - id: 1
-      url: 'https://github.com/stephensanwo/stephensanwo.dev/tree/master/stephensanwoweb/stephensanwoweb/pages/blog'
+      url: 'https://github.com/stephensanwo/stephensanwo.dev/tree/main/web/web/pages/blog'
       title: Github Blog Archive
   caption: I write about Distributed Software Systems, APIs and Microservices, Software Development, Machine Learning, Deep Learning & Artificial intelligence, Web & Mobile Development
   tags:
