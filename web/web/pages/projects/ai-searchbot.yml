@@ -1,0 +1,97 @@
+title: AI Powered Searchbot for PDFs and Excel Files
+slug: ai-searchbot
+notification: False
+notification_message: ""
+content: Project
+breadcrumb:
+  - page: Projects
+    page_url: "/"
+meta:
+  product: AI SearchBot
+  title: AI Powered Searchbot for PDFs and Excel Files
+  description: A Fullstack Demo Application that ingests data from csv, pdf files and implements a chat user interface for users to query/search data with AI.
+  type: website
+  url: https://projects.stephensanwo.dev/ai-searchbot
+  image: https://shared.stephensanwo.dev/images/ai-searchbot-question.png
+  tags: 
+    - Chatbot 
+    - FastAPI
+    - Python
+    - HTML
+    - JavaScript
+    - CSS
+    - Langchain
+    - Pinecone
+    - OpenAI
+    - Open Source
+  authors: 
+    - Stephen Sanwo
+data:
+  title: AI Powered Searchbot for PDFs and Excel Files
+  urls:
+    - id: 1
+      url: 'https://github.com/stephensanwo/ai_searchbot'
+      title: Fork on Github
+
+  caption: AA Fullstack Demo Application that ingests data from csv, pdf files and implements a chat user interface for users to query/search data with AI.
+
+  tags: 
+    - Chatbot 
+    - FastAPI
+    - Python
+    - HTML
+    - JavaScript
+    - CSS
+    - Langchain
+    - Pinecone
+    - OpenAI
+    - Open Source
+
+  body:
+
+    - type: markdown
+      content: |
+        # AI SearchBot Demo
+        
+        A Fullstack Demo Application that ingests data from csv, pdf files and implements a chat user interface for users to query/search data with AI.
+
+        ### Web Interface:
+        ![UI.png](https://shared.stephensanwo.dev/images/ai-searchbot-welcome-page.png)
+
+        ### Asking questions within the source data context:
+        ![UI.png](https://shared.stephensanwo.dev/images/ai-searchbot-question.png)
+
+        ### Asking questions outside the source data context:
+        ![UI.png](https://shared.stephensanwo.dev/images/ai-searchbot-unknown-question.png)
+
+        ### Built with:
+        - FastAPI
+        - Python
+        - HTML
+        - JavaScript
+        - CSS
+        - Langchain
+        - Pinecone
+        - OpenAI
+
+        ### How to Run
+
+        - Create a free pinecone index named `doctest-index` [here](https://www.pinecone.io)
+        - Configure environment variables in .env file in app root:
+
+        ```bash
+        export ENVIRONMENT = <local>
+        export VERSION = <version>
+        export OPENAI_API_KEY = <openapi-key>
+        export PINECONE_API_KEY = <pinecone-api-key>
+        export PINECONE_API_ENV = <pinecone-api-env>
+        ```
+        - Load Model
+            `python model.py` or make `load_model`
+
+        - Load Web App
+            `uvicorn main:app --reload`
+
+  cards: []
+
+  links: []

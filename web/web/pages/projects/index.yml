@@ -50,32 +50,37 @@ data:
       description: A conversational Artificial Intelligence based chatbot built with Python, Redis, React, FastAPI and GPT-J-6B language model on Huggingface
       url: "/ai-chatbot"
 
-    - id: "33"
+    - id: "4"
       title: Hyper - AI Powered Knowledge Bot (Alpha)
       description: Hyper is an AI enabled knowledge bot, that uses GPT4 to power knowledge queries, with the aim of tackling information overload. GPT4 is trained on mostly historical data, and does not have the context of your everyday documents like lecture notes, legal contracts etc. With Hyper, you can add this missing context to GPT4 by providing it with your data and documents then ask questions right within chat interfaces you are already familiar with.
       url: "/hyper-alpha"
 
-    - id: "4"
-      title: Stephen Sanwo Design System
-      description: <strong>Simplistic, minimalist, design system for building user interfaces</strong> - Open design system for products and digital experiences, with mostly ideas around simplistic and functional design at its foundation, the system consists of some working react code, and resources, and may perhaps grow into a larger project in the future
-      url: "/stephensanwo-design-system-v1.0"
-
     - id: "5"
-      title: Stephen Sanwo Profile & Engineering Blog v2.0
-      description: My developer profile and engineering blog, built with a simple & minimalistic design. Also includes a blog backend powered by Yaml, Github and Redis Json.
-      url: "https://github.com/stephensanwo/stephensanwo.dev"
-
-    - id: "6"
-      title: AI Chatbot Handbook - Build a fullstack AI Chatbot
-      description: The AI Chatbot Handbook; an intermediate fullstack software engineering series on how to build an AI Chatbot with tools like Redis, Python, and GPT. Published on FreeCodeCamp, in collaboration with Redis Enterprise
-      url: "https://www.freecodecamp.org/news/how-to-build-an-ai-chatbot-with-redis-python-and-gpt/"
-
-    - id: "7"
       title: Axon - Mindmap Notes for Techies
       description: Mindmap Notes for Techies
       url: "/axon-v1"
 
+    - id: "6"
+      title: AI Powered Searchbot for PDFs and Excel Files
+      description: A Fullstack Demo Application that ingests data from csv, pdf files and implements a chat user interface for users to query/search data with AI.
+      url: "/ai-searchbot"
+
+    - id: "7"
+      title: Stephen Sanwo Design System
+      description: <strong>Simplistic, minimalist, design system for building user interfaces</strong> - Open design system for products and digital experiences, with mostly ideas around simplistic and functional design at its foundation, the system consists of some working react code, and resources, and may perhaps grow into a larger project in the future
+      url: "/stephensanwo-design-system-v1.0"
+
+    - id: "8"
+      title: Stephen Sanwo Profile & Engineering Blog v2.0
+      description: My developer profile and engineering blog, built with a simple & minimalistic design. Also includes a blog backend powered by Yaml, Github and Redis Json.
+      url: "https://github.com/stephensanwo/stephensanwo.dev"
+
     - id: "9"
+      title: AI Chatbot Handbook - Build a fullstack AI Chatbot
+      description: The AI Chatbot Handbook; an intermediate fullstack software engineering series on how to build an AI Chatbot with tools like Redis, Python, and GPT. Published on FreeCodeCamp, in collaboration with Redis Enterprise
+      url: "https://www.freecodecamp.org/news/how-to-build-an-ai-chatbot-with-redis-python-and-gpt/"
+
+    - id: "10"
       title: (Public Archive) Stephen Sanwo Profile & Blog v1.1
       description: "React client and Python API that powered stephensanwo.dev version 1.1. This project is now deprecated and only available as a public archive repo  Frontend, built with React, Js, and CloudFlare Pages: <strong>https://github.com/stephensanwo/stephensanwodev-client</strong> & API built with Python, FastAPI and AWS App Runner: <strong>https://github.com/stephensanwo/stephensanwodev-api</strong>"
       status: "Deprecated"
@@ -83,7 +88,7 @@ data:
       actions: ""
       product: "Public Arvchive"
 
-    - id: "10"
+    - id: "11"
       title: ATM Analytics Enterprise Application
       description: A data-driven enterprise software application that automates the monitoring and reconciliation of Automated Teller Machines (ATMs) for Banks.
       status: ""
