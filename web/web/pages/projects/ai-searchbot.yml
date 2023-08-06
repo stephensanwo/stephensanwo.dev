@@ -33,7 +33,7 @@ data:
       url: 'https://github.com/stephensanwo/ai_searchbot'
       title: Fork on Github
 
-  caption: AA Fullstack Demo Application that ingests data from csv, pdf files and implements a chat user interface for users to query/search data with AI.
+  caption: A Fullstack Demo Application that ingests data from csv, pdf files and implements a chat user interface for users to query/search data with AI.
 
   tags: 
     - Chatbot 
@@ -65,6 +65,7 @@ data:
         ![UI.png](https://shared.stephensanwo.dev/images/ai-searchbot-unknown-question.png)
 
         ### Built with:
+
         - FastAPI
         - Python
         - HTML
@@ -74,6 +75,7 @@ data:
         - Pinecone
         - OpenAI
 
+        <br/>
         ### How to Run
 
         - Create a free pinecone index named `doctest-index` [here](https://www.pinecone.io)
