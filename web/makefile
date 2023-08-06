@@ -6,3 +6,6 @@ test:
 
 build:
 	python build.py
+
+dev:
+	python main.py

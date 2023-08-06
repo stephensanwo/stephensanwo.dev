@@ -31,6 +31,7 @@ class Body(BaseModel):
 
 class Cards(BaseModel):
     id: str = ""
+    sort_key: int = 0
     title: str = ""
     description: str = ""
     url: str = ""
@@ -69,6 +70,7 @@ class BreadCrumb(BaseModel):
 
 class Page(BaseModel):
     request: Optional[Request]
+    id: int = 0
     title: str = ""
     slug: str = ""
     notification: bool = False
