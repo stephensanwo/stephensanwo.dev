@@ -51,10 +51,6 @@ data:
 
     - type: markdown
       content: |
-        # AI SearchBot Demo
-        
-        A Fullstack Demo Application that ingests data from csv, pdf files and implements a chat user interface for users to query/search data with AI.
-
         ### Web Interface:
         ![UI.png](https://shared.stephensanwo.dev/images/ai-searchbot-welcome-page.png)
 
