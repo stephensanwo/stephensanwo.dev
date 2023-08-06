@@ -43,6 +43,7 @@ async def build_blog_list(ctx: WebMicroserviceContext):
             cards.append(
                 Cards(
                     id=f"{url[1].split('blog/')[1]}/{url[0]}",
+                    sort_key=page.id,
                     title=page.title,
                     description=page.data.caption,
                     url=f"{url[1].split('blog/')[1]}/{url[0]}",
@@ -95,7 +96,9 @@ async def build_blog_list(ctx: WebMicroserviceContext):
     blog_list_page: Page = await fetch_page_data(
         os.path.join(ROOT, "web/pages/blog/index.yml"))
 
-    blog_list_page.data.cards = list(reversed(cards))
+    sorted_cards = sorted(cards, key=lambda card: card["sort_key"])
+
+    blog_list_page.data.cards = list(reversed(sorted_cards))
 
     #  Generate static HTML for Blog List Page
     static_generator.build(
