@@ -42,6 +42,7 @@ async def blog_list(
             cards.append(
                 Cards(
                     id=f"{url[1]}/{url[0]}",
+                    sort_key=page.id,
                     title=page.title,
                     description=page.data.caption,
                     url=f"{url[1]}/{url[0]}",
@@ -59,8 +60,8 @@ async def blog_list(
     ROOT = os.path.dirname(os.path.abspath("./web"))
     blog_path = os.path.join(ROOT, "web/pages/blog/index.yml")
     blog_list_page: Page = await fetch_page_data(blog_path)
-
-    blog_list_page.data.cards = list(reversed(cards))
+    sorted_cards = sorted(cards, key=lambda card: card["sort_key"])
+    blog_list_page.data.cards = list(reversed(sorted_cards))
     blog_list_page.request = request
     return ctx.templates.TemplateResponse("page.html", blog_list_page.dict())
 
